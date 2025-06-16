@@ -2,7 +2,6 @@ package de.unibayreuth.se.campuscoffee.domain.ports;
 
 import de.unibayreuth.se.campuscoffee.domain.exceptions.PosNotFoundException;
 import de.unibayreuth.se.campuscoffee.domain.exceptions.ReviewNotFoundException;
-import de.unibayreuth.se.campuscoffee.domain.model.Pos;
 import de.unibayreuth.se.campuscoffee.domain.model.Review;
 import org.springframework.lang.NonNull;
 
@@ -18,7 +17,7 @@ public interface ReviewDataService {
     @NonNull
     Review getById(@NonNull Long id) throws ReviewNotFoundException;
     @NonNull
-    List<Review> getByPos(@NonNull Pos pos) throws PosNotFoundException;
+    List<Review> getByPos(@NonNull Long pos) throws PosNotFoundException;
     @NonNull
     Review create(@NonNull Review review);
     @NonNull
